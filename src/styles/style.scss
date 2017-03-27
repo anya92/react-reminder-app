@@ -1,7 +1,7 @@
 $sidebar-color: #15283E;
 $button-color: #A80073;
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700'); 
 
 html, body {
   font-family: 'Quicksand', sans-serif;
@@ -25,7 +25,7 @@ html, body {
   padding: 10px;
   text-align: center;
   position: relative;
-  background: url('../../icons/image.jpg') center no-repeat;
+  background: url('../images/image.jpg') center no-repeat;
   background-size: cover;
   h1, h2, p, div.remove-button {
     position: absolute;

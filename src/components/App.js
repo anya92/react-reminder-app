@@ -59,8 +59,8 @@ class App extends Component {
                     <div className="list-item icon">
                       {
                         !reminder.category 
-                        ? <img src={require('../../icons/question.png')} alt="icon" />
-                        : <img src={require(`../../icons/${reminder.category}.png`)} alt="icon" />
+                        ? <img src={require('../images/question.png')} alt="icon" />
+                        : <img src={require(`../images/${reminder.category}.png`)} alt="icon" />
                       }
                     </div>
                     <div className="list-item description">

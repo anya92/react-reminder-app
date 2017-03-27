@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: resolve(__dirname, 'dist'),
     filename: 'bundle.js'
+    // publicPath: '/'
   },
   module: {
     rules: [
@@ -22,18 +23,21 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-          publicPath: '/'
+          use: ['css-loader', 'sass-loader']
         })
       }, 
       {
-        test: /\.(jpe?g|png|svg)$/,
-        loader: 'file-loader'
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader?name=images/[hash:6].[ext]'
+          // 'image-webpack-loader'
+        ]
       }
     ]
   },
   devServer: {
     contentBase: resolve(__dirname, 'dist'),
+    // publicPath: '/',
     compress: true,
     stats: "errors-only",
     open: true
